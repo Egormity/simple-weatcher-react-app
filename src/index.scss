@@ -43,7 +43,7 @@ body {
 #root {
   height: 100vh;
   width: 100vw;
-  background-image: url("./images/background.jpg");
+  background-image: url('./images/background.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -74,10 +74,11 @@ body {
   border: 0.2rem solid var(--color-black-03);
   transition: all var(--trans-dur);
   box-shadow: 0 0.5rem 1rem var(--color-black-01);
-}
-.input-main:hover {
-  border: 0.2rem solid var(--color-black-05);
-  box-shadow: 0 0.75rem 1.25rem var(--color-black-02);
+
+  &:hover {
+    border: 0.2rem solid var(--color-black-05);
+    box-shadow: 0 0.75rem 1.25rem var(--color-black-02);
+  }
 }
 
 .card-main {
@@ -99,4 +100,4 @@ h1 {
 h2 {
   font-size: 2.8rem;
   font-weight: 400;
-}/*# sourceMappingURL=index.css.map */
+}
