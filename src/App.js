@@ -1,4 +1,4 @@
-import { Children, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './index.css';
 
 function getWeatherIcon(wmoCode) {
@@ -203,13 +203,12 @@ function DayCard({
     setActiveTemp(temperature);
     setActiveIcon(icon);
   };
-  const setStartData = () => {
+  useEffect(() => {
     if (num === 0) {
       setActiveTemp(temperature);
       setActiveIcon(icon);
     }
-  };
-  useEffect(() => setStartData(), [isLoading]);
+  }, [isLoading]);
 
   // prettier-ignore
   return (
