@@ -208,7 +208,7 @@ function DayCard({
       setActiveTemp(temperature);
       setActiveIcon(icon);
     }
-  }, [isLoading]);
+  }, [isLoading, num, temperature, icon, setActiveTemp, setActiveIcon]);
 
   // prettier-ignore
   return (
