@@ -6,6 +6,7 @@
   --color-black-03: rgba(0, 0, 0, 0.3);
   --color-black-02: rgba(0, 0, 0, 0.2);
   --color-black-01: rgba(0, 0, 0, 0.1);
+  --color-grey-transp: rgba(200, 200, 200, 0.5);
   --trans-dur: 0.2s;
 }
 
@@ -56,18 +57,13 @@ body {
   overflow: visible;
   display: grid;
   grid-gap: 5rem;
-}
-
-.input-container {
-  overflow: visible;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  justify-items: center;
+  transform: translateY(-5.9rem);
 }
 
 .input-main {
   width: 80%;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   padding: 1rem 2rem;
   border-radius: 1.5rem;
   outline: none;
@@ -84,13 +80,55 @@ body {
 .card-main {
   background-color: var(--color-white-03);
   width: 100%;
-  padding: 10rem;
+  padding: 15rem 5rem;
   border-radius: 2rem;
   box-shadow: 0 1rem 2rem var(--color-black-02);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7.5rem;
+  transition: var(--trans-dur);
+  position: relative;
+  overflow: visible;
+}
+
+.text-main {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.days-container {
+  display: flex;
+  gap: 3rem;
+  overflow-x: scroll;
+  width: 80%;
+  padding: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+
+.day {
+  background-color: var(--color-white-03);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.75rem 1.25rem var(--color-black-02);
+  padding: 1.5rem;
+  min-width: 20rem;
+  border-radius: 3rem;
+  transition: all var(--trans-dur);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-grey-transp);
+  }
+
+  &--active {
+    background-color: var(--color-black-03);
+  }
 }
 
 h1 {
@@ -100,4 +138,21 @@ h1 {
 h2 {
   font-size: 2.8rem;
   font-weight: 400;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.icon-big {
+  font-size: 15rem;
+}
+
+.icon-small {
+  font-size: 7.5rem;
+}
+
+.loading {
+  filter: brightness(50%);
 }
